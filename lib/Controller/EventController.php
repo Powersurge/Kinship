@@ -5,6 +5,7 @@ declare(strict_types=1);
 namespace OCA\Kinship\Controller;
 
 use OCA\Kinship\Service\EventService;
+use OCA\Kinship\Db\Event;
 use OCP\AppFramework\ApiController;
 use OCP\AppFramework\Http\DataResponse;
 use OCP\IRequest;
@@ -65,5 +66,44 @@ class EventController extends ApiController
             'events' =>
                 $this->service->getForFamily($familyId)
         ]);
+    }
+
+    public function create(
+        array $data
+    ): DataResponse {
+
+
+        $event =
+            new Event();
+
+
+        $event->setTitle(
+            $data['title'] ?? ''
+        );
+
+
+        $event->setType(
+            $data['type'] ?? 'custom'
+        );
+
+
+        $event->setEventDate(
+            $data['eventDate'] ?? null
+        );
+
+
+        $event->setLocation(
+            $data['location'] ?? null
+        );
+
+
+        return new DataResponse(
+
+            $this->service->create(
+                $event
+            )
+
+        );
+
     }
 }
