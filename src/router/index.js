@@ -14,6 +14,8 @@ import FamilyEdit from '../views/FamilyEdit.vue';
 
 import RelationshipCreate from '../views/RelationshipCreate.vue';
 
+import FamilyTreeView from '../views/FamilyTree.vue';
+
 Vue.use(Router);
 
 export default new Router({
@@ -59,6 +61,11 @@ export default new Router({
             path: '/relationships/create',
             name: 'relationship-create',
             component: RelationshipCreate
+        },
+        {
+            path:'/tree',
+            name:'family-tree',
+            component:FamilyTreeView
         },
         {
             path: '/events',
