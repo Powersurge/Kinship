@@ -61,4 +61,22 @@ class PersonMapper extends QBMapper
     {
         $this->deleteEntity($person);
     }
+
+    /**
+     * Create a person.
+     */
+    public function insert(
+        Person $person
+    ): Person {
+        return $this->insertEntity($person);
+    }
+
+    /**
+     * Update a person.
+     */
+    public function update(
+        Person $person
+    ): Person {
+        return $this->updateEntity($person);
+    }
 }
