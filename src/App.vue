@@ -11,6 +11,8 @@
             |
             <router-link to="/events">Events</router-link>
             |
+            <router-link to="/events/create">Add Event</router-link>
+            |
             <router-link to="/relationships/create">Relationships</router-link>
             |
             <router-link to="/tree">Family Tree</router-link>
