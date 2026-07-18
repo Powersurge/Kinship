@@ -5,6 +5,7 @@ declare(strict_types=1);
 namespace OCA\Kinship\Controller;
 
 use OCA\Kinship\Service\FamilyService;
+use OCA\Kinship\Db\Family;
 use OCP\AppFramework\ApiController;
 use OCP\AppFramework\Http\DataResponse;
 use OCP\IRequest;
@@ -41,5 +42,62 @@ class FamilyController extends ApiController
         return new DataResponse(
             $this->service->get($id)
         );
+    }
+
+    /**
+     * Create family.
+     */
+    public function create(
+        array $data
+    ): DataResponse {
+
+        $family = new Family();
+
+        $family->setName(
+            $data['name'] ?? ''
+        );
+
+        $family->setDescription(
+            $data['description'] ?? null
+        );
+
+
+        return new DataResponse(
+            $this->service->create(
+                $family
+            )
+        );
+    }
+
+    /**
+     * Update family.
+     */
+    public function update(
+        int $id,
+        array $data
+    ): DataResponse {
+
+        return new DataResponse(
+            $this->service->updateFamily(
+                $id,
+                $data
+            )
+        );
+    }
+
+    /**
+     * Delete family.
+     */
+    public function delete(
+        int $id
+    ): DataResponse {
+
+        $this->service->deleteFamily(
+            $id
+        );
+
+        return new DataResponse([
+            'deleted' => true
+        ]);
     }
 }
