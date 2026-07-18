@@ -9,6 +9,8 @@ import Events from '../views/Events.vue';
 import PersonCreate from '../views/PersonCreate.vue';
 import PersonEdit from '../views/PersonEdit.vue';
 
+import FamilyCreate from '../views/FamilyCreate.vue';
+
 Vue.use(Router);
 
 export default new Router({
@@ -39,6 +41,11 @@ export default new Router({
             path: '/families',
             name: 'families',
             component: Families
+        },
+        {
+            path: '/families/create',
+            name: 'family-create',
+            component: FamilyCreate
         },
         {
             path: '/events',
