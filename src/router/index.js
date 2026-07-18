@@ -12,6 +12,8 @@ import PersonEdit from '../views/PersonEdit.vue';
 import FamilyCreate from '../views/FamilyCreate.vue';
 import FamilyEdit from '../views/FamilyEdit.vue';
 
+import EventCreate from '../views/EventCreate.vue';
+
 import RelationshipCreate from '../views/RelationshipCreate.vue';
 
 import FamilyTreeView from '../views/FamilyTree.vue';
@@ -63,6 +65,11 @@ export default new Router({
             path: '/events',
             name: 'events',
             component: Events
+        },
+        {
+            path:'/events/create',
+            name:'event-create',
+            component:EventCreate
         },
         {
             path: '/relationships/create',
