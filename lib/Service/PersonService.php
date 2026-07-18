@@ -39,4 +39,22 @@ class PersonService
     {
         $this->mapper->delete($person);
     }
+
+    /**
+     * Create a person.
+     */
+    public function create(
+        Person $person
+    ): Person {
+        return $this->mapper->insert($person);
+    }
+
+    /**
+     * Update a person.
+     */
+    public function update(
+        Person $person
+    ): Person {
+        return $this->mapper->update($person);
+    }
 }
