@@ -1,1 +1,54 @@
+<?xml version="1.0"?>
+<info xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+      xsi:noNamespaceSchemaLocation="https://apps.nextcloud.com/schema/apps/info.xsd">
 
+    <id>kinship</id>
+
+    <name>Kinship</name>
+
+    <summary>
+        A family management and genealogy platform for Nextcloud.
+    </summary>
+
+    <description><![CDATA[
+        Kinship helps families manage people, relationships, events,
+        memories, and genealogy information.
+
+        The core application provides a foundation that developers can
+        extend with additional modules.
+    ]]></description>
+
+    <version>0.1.0</version>
+
+    <licence>agpl</licence>
+
+    <author mail="developers@kinship.app">
+        Kinship Contributors
+    </author>
+
+    <namespace>Kinship</namespace>
+
+    <category>organization</category>
+    <category>social</category>
+
+    <dependencies>
+        <nextcloud min-version="29" max-version="32"/>
+    </dependencies>
+
+    <website>
+        https://github.com/yourusername/kinship
+    </website>
+
+    <bugs>
+        https://github.com/yourusername/kinship/issues
+    </bugs>
+
+    <repository>
+        https://github.com/yourusername/kinship
+    </repository>
+
+    <screenshot>
+        https://github.com/yourusername/kinship/raw/main/screenshots/dashboard.png
+    </screenshot>
+
+</info>
