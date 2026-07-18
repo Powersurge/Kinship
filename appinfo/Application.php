@@ -16,6 +16,8 @@ use OCA\Kinship\Service\TreeService;
 use OCA\Kinship\Import\GedcomParser;
 use OCA\Kinship\Import\GedcomImporter;
 use OCA\Kinship\Import\GedcomExtractor;
+use OCA\Kinship\Import\GedcomFamilyImporter;
+use OCA\Kinship\Import\GedcomRelationshipImporter;
 use OCP\AppFramework\App;
 use OCP\AppFramework\Bootstrap\IBootContext;
 use OCP\AppFramework\Bootstrap\IBootstrap;
@@ -152,6 +154,32 @@ class Application extends App implements IBootstrap
 
                 return new GedcomExtractor();
 
+            }
+        );
+
+        $context->registerService(
+            GedcomFamilyImporter::class,
+            function ($c) {
+
+                return new GedcomFamilyImporter(
+
+                    $c->get(
+                        \OCA\Kinship\Db\FamilyMapper::class
+                    )
+                );
+            }
+        );
+
+        $context->registerService(
+            GedcomRelationshipImporter::class,
+            function ($c) {
+
+                return new GedcomRelationshipImporter(
+
+                    $c->get(
+                        \OCA\Kinship\Db\RelationshipMapper::class
+                    )
+                );
             }
         );
     }
