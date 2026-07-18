@@ -6,12 +6,14 @@ namespace OCA\Kinship\Import;
 
 use OCA\Kinship\Db\Person;
 use OCA\Kinship\Service\PersonService;
+use OCA\Kinship\Import\GedcomExtractor;
 
 class GedcomImporter
 {
 
     public function __construct(
         private GedcomParser $parser,
+        private GedcomExtractor $extractor,
         private PersonService $personService
     ) {
     }
@@ -31,61 +33,21 @@ class GedcomImporter
             );
 
 
-        $people = [];
-
-
-        foreach ($records as $record) {
-
-
-            if ($record['tag'] !== 'NAME') {
-                continue;
-            }
-
-
-            $person =
-                new Person();
-
-
-            $name =
-                $record['value'] ?? '';
-
-
-            $parts =
-                explode(
-                    '/',
-                    $name
-                );
-
-
-            $person->setFirstName(
-                trim(
-                    $parts[0]
-                )
+        $data =
+            $this->extractor->extract(
+                $records
             );
 
 
-            $person->setLastName(
-                trim(
-                    $parts[1] ?? ''
-                )
-            );
+        return [
 
+            'people' =>
+                $data['people'],
 
-            $saved =
-                $this->personService
-                    ->create(
-                        $person
-                    );
+            'families' =>
+                $data['families']
 
-
-            $people[] =
-                $saved;
-
-        }
-
-
-        return $people;
+        ];
 
     }
-
 }
