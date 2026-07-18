@@ -55,6 +55,85 @@ class EventService
         return $this->mapper->findByFamily($familyId);
     }
 
+    public function create(
+        Event $event
+    ): Event {
+
+        return $this->mapper->insert(
+            $event
+        );
+
+    }
+
+    public function updateEvent(
+        int $id,
+        array $data
+    ): Event {
+
+        $event =
+            $this->mapper->find(
+                $id
+            );
+
+
+        if (isset($data['title'])) {
+
+            $event->setTitle(
+                $data['title']
+            );
+
+        }
+
+
+        if (isset($data['type'])) {
+
+            $event->setType(
+                $data['type']
+            );
+
+        }
+
+
+        if (isset($data['eventDate'])) {
+
+            $event->setEventDate(
+                $data['eventDate']
+            );
+
+        }
+
+
+        if (isset($data['location'])) {
+
+            $event->setLocation(
+                $data['location']
+            );
+
+        }
+
+
+        return $this->mapper->update(
+            $event
+        );
+
+    }
+
+    public function deleteEvent(
+        int $id
+    ): void {
+
+        $event =
+            $this->mapper->find(
+                $id
+            );
+
+
+        $this->mapper->delete(
+            $event
+        );
+
+    }
+
     /**
      * Delete an event.
      */
