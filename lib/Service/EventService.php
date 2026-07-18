@@ -133,13 +133,4 @@ class EventService
         );
 
     }
-
-    /**
-     * Delete an event.
-     */
-    public function delete(
-        Event $event
-    ): void {
-        $this->mapper->delete($event);
-    }
 }
