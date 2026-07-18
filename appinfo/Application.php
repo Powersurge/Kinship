@@ -15,6 +15,7 @@ use OCA\Kinship\Service\EventService;
 use OCA\Kinship\Service\TreeService;
 use OCA\Kinship\Import\GedcomParser;
 use OCA\Kinship\Import\GedcomImporter;
+use OCA\Kinship\Import\GedcomExtractor;
 use OCP\AppFramework\App;
 use OCP\AppFramework\Bootstrap\IBootContext;
 use OCP\AppFramework\Bootstrap\IBootstrap;
@@ -142,6 +143,15 @@ class Application extends App implements IBootstrap
                         \OCA\Kinship\Service\PersonService::class
                     )
                 );
+            }
+        );
+
+        $context->registerService(
+            GedcomExtractor::class,
+            function () {
+
+                return new GedcomExtractor();
+
             }
         );
     }
