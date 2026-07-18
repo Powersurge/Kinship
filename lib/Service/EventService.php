@@ -115,7 +115,6 @@ class EventService
         return $this->mapper->update(
             $event
         );
-
     }
 
     public function deleteEvent(
@@ -131,6 +130,5 @@ class EventService
         $this->mapper->delete(
             $event
         );
-
     }
 }
