@@ -7,6 +7,7 @@ import Families from '../views/Families.vue';
 import Events from '../views/Events.vue';
 
 import PersonCreate from '../views/PersonCreate.vue';
+import PersonEdit from '../views/PersonEdit.vue';
 
 Vue.use(Router);
 
@@ -28,6 +29,11 @@ export default new Router({
             path: '/people/create',
             name: 'person-create',
             component: PersonCreate
+        },
+        {
+            path: '/people/:id/edit',
+            name: 'person-edit',
+            component: PersonEdit
         },
         {
             path: '/families',
