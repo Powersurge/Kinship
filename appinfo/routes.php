@@ -99,5 +99,20 @@ return [
             'url' => '/api/v1/import/gedcom',
             'verb' => 'POST',
         ],
+        [
+            'name' => 'event#create',
+            'url' => '/api/v1/events',
+            'verb' => 'POST',
+        ],
+        [
+            'name' => 'event#update',
+            'url' => '/api/v1/events/{id}',
+            'verb' => 'PUT',
+        ],
+        [
+            'name' => 'event#delete',
+            'url' => '/api/v1/events/{id}',
+            'verb' => 'DELETE',
+        ],
     ],
 ];
