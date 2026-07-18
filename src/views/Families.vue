@@ -8,8 +8,19 @@
                 :key="family.id"
             >
                 {{ family.name }}
+
+                <router-link
+                    :to="'/families/' + family.id + '/edit'"
+                >
+                    Edit
+                </router-link>
             </li>
         </ul>
+
+        <router-link to="/families/create">
+            Add Family
+        </router-link>
+
     </div>
 </template>
 
