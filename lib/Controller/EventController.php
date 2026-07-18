@@ -106,4 +106,39 @@ class EventController extends ApiController
         );
 
     }
+
+    public function update(
+        int $id,
+        array $data
+    ): DataResponse {
+
+
+        return new DataResponse(
+
+            $this->service->updateEvent(
+                $id,
+                $data
+            )
+
+        );
+
+    }
+
+    public function delete(
+        int $id
+    ): DataResponse {
+
+
+        $this->service->deleteEvent(
+            $id
+        );
+
+
+        return new DataResponse([
+
+            'deleted' => true
+
+        ]);
+
+    }
 }
