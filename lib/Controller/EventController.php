@@ -105,6 +105,24 @@ class EventController extends ApiController
 
         );
 
+        if (
+            isset($data['personId'])
+        ) {
+
+            $event->setPersonId(
+                $data['personId']
+            );
+
+        }
+
+        if (
+            isset($data['familyId'])
+        ) {
+
+            $event->setFamilyId(
+                $data['familyId']
+            );
+        }
     }
 
     public function update(
