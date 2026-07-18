@@ -57,4 +57,64 @@ class PersonService
     ): Person {
         return $this->mapper->update($person);
     }
+
+    /**
+     * Update person fields.
+     */
+    public function updatePerson(
+        int $id,
+        array $data
+    ): Person {
+        $person = $this->mapper->find($id);
+
+        if (isset($data['firstName'])) {
+            $person->setFirstName(
+                $data['firstName']
+            );
+        }
+
+        if (isset($data['middleName'])) {
+            $person->setMiddleName(
+                $data['middleName']
+            );
+        }
+
+        if (isset($data['lastName'])) {
+            $person->setLastName(
+                $data['lastName']
+            );
+        }
+
+        if (isset($data['preferredName'])) {
+            $person->setPreferredName(
+                $data['preferredName']
+            );
+        }
+
+        if (isset($data['birthDate'])) {
+            $person->setBirthDate(
+                $data['birthDate']
+            );
+        }
+
+        if (isset($data['deathDate'])) {
+            $person->setDeathDate(
+                $data['deathDate']
+            );
+        }
+
+        return $this->mapper->update($person);
+    }
+
+
+    /**
+     * Delete person.
+     */
+    public function deletePerson(
+        int $id
+    ): void {
+        $person = $this->mapper->find($id);
+
+        $this->mapper->delete($person);
+    }
 }
