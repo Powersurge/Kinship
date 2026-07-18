@@ -9,6 +9,12 @@
             >
                 {{ person.firstName }}
                 {{ person.lastName }}
+
+                <router-link
+                    :to="'/people/' + person.id + '/edit'"
+                >
+                    Edit
+                </router-link>
             </li>
         </ul>
 
