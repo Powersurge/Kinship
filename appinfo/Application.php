@@ -10,6 +10,8 @@ use OCA\Kinship\Db\FamilyMapper;
 use OCA\Kinship\Service\FamilyService;
 use OCA\Kinship\Db\RelationshipMapper;
 use OCA\Kinship\Service\RelationshipService;
+use OCA\Kinship\Db\EventMapper;
+use OCA\Kinship\Service\EventService;
 use OCP\AppFramework\App;
 use OCP\AppFramework\Bootstrap\IBootContext;
 use OCP\AppFramework\Bootstrap\IBootstrap;
@@ -77,6 +79,24 @@ class Application extends App implements IBootstrap
             function ($c) {
                 return new RelationshipService(
                     $c->get(RelationshipMapper::class)
+                );
+            }
+        );
+
+        $context->registerService(
+            EventMapper::class,
+            function ($c) {
+                return new EventMapper(
+                    $c->get(\OCP\IDBConnection::class)
+                );
+            }
+        );
+
+        $context->registerService(
+            EventService::class,
+            function ($c) {
+                return new EventService(
+                    $c->get(EventMapper::class)
                 );
             }
         );
