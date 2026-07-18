@@ -114,5 +114,10 @@ return [
             'url' => '/api/v1/import/gedcom',
             'verb' => 'POST',
         ],
+        [
+            'name' => 'timeline#person',
+            'url' => '/api/v1/timeline/person/{personId}',
+            'verb' => 'GET',
+        ],
     ],
 ];
