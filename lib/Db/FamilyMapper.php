@@ -59,6 +59,24 @@ class FamilyMapper extends QBMapper
     }
 
     /**
+     * Create family.
+     */
+    public function insert(
+        Family $family
+    ): Family {
+        return $this->insertEntity($family);
+    }
+
+    /**
+     * Update family.
+     */
+    public function update(
+        Family $family
+    ): Family {
+        return $this->updateEntity($family);
+    }
+
+    /**
      * Delete a family.
      */
     public function delete(
