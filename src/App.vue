@@ -10,6 +10,8 @@
             <router-link to="/families">Families</router-link>
             |
             <router-link to="/events">Events</router-link>
+            |
+            <router-link to="/relationships/create">Relationships</router-link>
         </nav>
 
         <router-view />
