@@ -25,11 +25,6 @@ return [
             'verb' => 'PUT',
         ],
         [
-            'name' => 'person#destroy',
-            'url' => '/api/v1/people/{id}',
-            'verb' => 'DELETE',
-        ],
-        [
             'name' => 'person#delete',
             'url' => '/api/v1/people/{id}',
             'verb' => 'DELETE',
@@ -43,6 +38,21 @@ return [
             'name' => 'family#show',
             'url' => '/api/v1/families/{id}',
             'verb' => 'GET',
+        ],
+        [
+            'name' => 'family#create',
+            'url' => '/api/v1/families',
+            'verb' => 'POST',
+        ],
+        [
+            'name' => 'family#update',
+            'url' => '/api/v1/families/{id}',
+            'verb' => 'PUT',
+        ],
+        [
+            'name' => 'family#delete',
+            'url' => '/api/v1/families/{id}',
+            'verb' => 'DELETE',
         ],
         [
             'name' => 'relationship#index',
