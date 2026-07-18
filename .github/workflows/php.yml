@@ -1,0 +1,35 @@
+name: PHP Tests
+
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+
+jobs:
+  php:
+
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup PHP
+        uses: shivammathur/setup-php@v2
+        with:
+          php-version: '8.2'
+
+      - name: Validate composer
+        run: composer validate
+
+      - name: Install dependencies
+        run: composer install --no-progress --prefer-dist
+
+      - name: Run tests
+        run: |
+          if [ -d tests ]; then
+            vendor/bin/phpunit
+          else
+            echo "No tests yet"
+          fi
