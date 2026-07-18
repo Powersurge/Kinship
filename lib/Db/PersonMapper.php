@@ -53,6 +53,19 @@ class PersonMapper extends QBMapper
     }
 
     /**
+     * Find person or return null.
+     */
+    public function findOrNull(
+        int $id
+    ): ?Person {
+        try {
+            return $this->find($id);
+        } catch (\OCP\AppFramework\Db\DoesNotExistException $e) {
+            return null;
+        }
+    }
+
+    /**
      * Delete a person.
      *
      * @param Person $person
