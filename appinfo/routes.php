@@ -60,5 +60,20 @@ return [
             'url' => '/api/v1/events',
             'verb' => 'GET',
         ],
+        [
+            'name' => 'event#show',
+            'url' => '/api/v1/events/{id}',
+            'verb' => 'GET',
+        ],
+        [
+            'name' => 'event#personEvents',
+            'url' => '/api/v1/people/{personId}/events',
+            'verb' => 'GET',
+        ],
+        [
+            'name' => 'event#familyEvents',
+            'url' => '/api/v1/families/{familyId}/events',
+            'verb' => 'GET',
+        ],
     ],
 ];
