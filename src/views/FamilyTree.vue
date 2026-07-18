@@ -1,110 +1,114 @@
 <template>
+    <div class="tree">
 
-<div>
-
-<h2>
-    Family Tree
-</h2>
-
-
-<FamilyTreeComponent
-
-    v-if="root"
-
-    :person="root"
-
-    :children="root.children"
-
-/>
+        <div class="person-node">
+            {{ person.firstName }}
+            {{ person.lastName }}
+        </div>
 
 
-</div>
+        <div
+            v-if="children.length"
+            class="children"
+        >
 
+            <div
+                v-for="child in children"
+                :key="child.id"
+                class="child"
+            >
+
+                <div class="line"></div>
+
+                <FamilyTree
+                    :person="child"
+                    :children="child.children || []"
+                />
+
+            </div>
+
+        </div>
+
+    </div>
 </template>
 
 
 <script>
 
-import FamilyTreeComponent
-from '../components/FamilyTree.vue';
-
-
 export default {
 
+    name: 'FamilyTree',
 
-name:'FamilyTreeView',
+    props: {
 
+        person: {
+            type: Object,
+            required: true
+        },
 
-components: {
+        children: {
+            type: Array,
+            default: () => []
+        }
 
-FamilyTreeComponent
-
-},
-
-
-data() {
-
-return {
-
-root:null
-
-};
-
-},
-
-
-mounted() {
-
-this.loadTree();
-
-},
-
-
-methods: {
-
-
-async loadTree() {
-
-
-/*
- Future API:
-
- GET /api/v1/tree/{personId}
-
- Returns:
-
- {
-   id:1,
-   firstName:"John",
-   lastName:"Smith",
-   children:[]
- }
-
-*/
-
-
-const response =
-await fetch(
-
-OC.generateUrl(
-
-'/apps/kinship/api/v1/tree/1'
-
-)
-
-);
-
-
-this.root =
-await response.json();
-
-
-}
-
-
-}
-
+    }
 
 }
 
 </script>
+
+
+<style scoped>
+
+.tree {
+    text-align: center;
+    margin: 20px;
+}
+
+
+.person-node {
+
+    display: inline-block;
+
+    background: #0082c9;
+
+    color: white;
+
+    padding: 10px 20px;
+
+    border-radius: 8px;
+
+}
+
+
+.children {
+
+    display: flex;
+
+    justify-content: center;
+
+    gap: 30px;
+
+    margin-top: 30px;
+
+}
+
+
+.child {
+
+    position: relative;
+
+}
+
+
+.line {
+
+    height: 20px;
+
+    border-left: 2px solid #888;
+
+    margin: auto;
+
+}
+
+</style>
