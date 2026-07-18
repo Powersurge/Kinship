@@ -12,6 +12,8 @@ import PersonEdit from '../views/PersonEdit.vue';
 import FamilyCreate from '../views/FamilyCreate.vue';
 import FamilyEdit from '../views/FamilyEdit.vue';
 
+import RelationshipCreate from '../views/RelationshipCreate.vue';
+
 Vue.use(Router);
 
 export default new Router({
@@ -52,6 +54,11 @@ export default new Router({
             path: '/families/:id/edit',
             name: 'family-edit',
             component: FamilyEdit
+        },
+        {
+            path: '/relationships/create',
+            name: 'relationship-create',
+            component: RelationshipCreate
         },
         {
             path: '/events',
