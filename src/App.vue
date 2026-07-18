@@ -14,6 +14,8 @@
             <router-link to="/relationships/create">Relationships</router-link>
             |
             <router-link to="/tree">Family Tree</router-link>
+            |
+            <router-link to="/import">Import</router-link>
         </nav>
 
         <router-view />
