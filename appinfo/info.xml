@@ -11,16 +11,21 @@
     </summary>
 
     <description><![CDATA[
-        Kinship helps families manage people, relationships, events,
-        memories, and genealogy information.
 
-        The core application provides a foundation that developers can
-        extend with additional modules.
+Kinship helps families preserve history through:
+
+- People
+- Relationships
+- Events
+- Family trees
+
+Designed as an extensible genealogy platform.
+
     ]]></description>
 
     <version>0.1.0</version>
 
-    <licence>agpl</licence>
+    <licence>AGPL</licence>
 
     <author mail="developers@kinship.app">
         Kinship Contributors
