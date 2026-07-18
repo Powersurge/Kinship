@@ -5,6 +5,7 @@ declare(strict_types=1);
 namespace OCA\Kinship\Controller;
 
 use OCA\Kinship\Service\PersonService;
+use OCA\Kinship\Db\Person;
 use OCP\AppFramework\ApiController;
 use OCP\AppFramework\Http\DataResponse;
 use OCP\IRequest;
@@ -34,6 +35,39 @@ class PersonController extends ApiController
     ): DataResponse {
         return new DataResponse(
             $this->service->get($id)
+        );
+    }
+
+    /**
+     * Create person.
+     */
+    public function create(
+        array $data
+    ): DataResponse {
+        $person = new Person();
+
+        $person->setFirstName(
+            $data['firstName'] ?? ''
+        );
+
+        $person->setMiddleName(
+            $data['middleName'] ?? ''
+        );
+
+        $person->setLastName(
+            $data['lastName'] ?? ''
+        );
+
+        $person->setPreferredName(
+            $data['preferredName'] ?? ''
+        );
+
+        $person->setBirthDate(
+            $data['birthDate'] ?? null
+        );
+
+        return new DataResponse(
+            $this->service->create($person)
         );
     }
 }
