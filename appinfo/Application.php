@@ -13,6 +13,8 @@ use OCA\Kinship\Service\RelationshipService;
 use OCA\Kinship\Db\EventMapper;
 use OCA\Kinship\Service\EventService;
 use OCA\Kinship\Service\TreeService;
+use OCA\Kinship\Import\GedcomParser;
+use OCA\Kinship\Import\GedcomImporter;
 use OCP\AppFramework\App;
 use OCP\AppFramework\Bootstrap\IBootContext;
 use OCP\AppFramework\Bootstrap\IBootstrap;
@@ -114,6 +116,30 @@ class Application extends App implements IBootstrap
 
                     $c->get(
                         \OCA\Kinship\Db\RelationshipMapper::class
+                    )
+                );
+            }
+        );
+
+        $context->registerService(
+            GedcomParser::class,
+            function () {
+                return new GedcomParser();
+            }
+        );
+
+        $context->registerService(
+            GedcomImporter::class,
+            function ($c) {
+
+                return new GedcomImporter(
+
+                    $c->get(
+                        GedcomParser::class
+                    ),
+
+                    $c->get(
+                        \OCA\Kinship\Service\PersonService::class
                     )
                 );
             }
