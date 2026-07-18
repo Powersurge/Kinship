@@ -8,6 +8,7 @@ use OCA\Kinship\Service\PersonService;
 use OCA\Kinship\Db\Person;
 use OCP\AppFramework\ApiController;
 use OCP\AppFramework\Http\DataResponse;
+use OCP\AppFramework\Http;
 use OCP\IRequest;
 
 class PersonController extends ApiController
@@ -68,6 +69,36 @@ class PersonController extends ApiController
 
         return new DataResponse(
             $this->service->create($person)
+        );
+    }
+
+    /**
+     * Update person.
+     */
+    public function update(
+        int $id,
+        array $data
+    ): DataResponse {
+        return new DataResponse(
+            $this->service->updatePerson(
+                $id,
+                $data
+            )
+        );
+    }
+
+    /**
+     * Delete person.
+     */
+    public function delete(
+        int $id
+    ): DataResponse {
+        $this->service->deletePerson($id);
+
+        return new DataResponse(
+            [
+                'deleted' => true
+            ]
         );
     }
 }
