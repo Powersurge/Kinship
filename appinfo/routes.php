@@ -29,7 +29,11 @@ return [
             'url' => '/api/v1/people/{id}',
             'verb' => 'DELETE',
         ],
-
+        [
+            'name' => 'person#delete',
+            'url' => '/api/v1/people/{id}',
+            'verb' => 'DELETE',
+        ],
         [
             'name' => 'family#index',
             'url' => '/api/v1/families',
