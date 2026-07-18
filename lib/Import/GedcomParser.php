@@ -6,9 +6,6 @@ namespace OCA\Kinship\Import;
 
 class GedcomParser
 {
-    /**
-     * Parse GEDCOM text.
-     */
     public function parse(
         string $content
     ): array {
@@ -29,33 +26,23 @@ class GedcomParser
             }
 
 
-            $parts =
-                explode(
-                    ' ',
-                    $line,
-                    3
-                );
-
-
-            $level =
-                (int)$parts[0];
-
-
-            $tag =
-                $parts[1] ?? '';
-
-
-            $value =
-                $parts[2] ?? null;
+            preg_match(
+                '/^(\d+)\s+(@[^@]+@)?\s*(.+)$/',
+                $line,
+                $matches
+            );
 
 
             $records[] = [
 
-                'level' => $level,
+                'level' =>
+                    (int)$matches[1],
 
-                'tag' => $tag,
+                'xref' =>
+                    $matches[2] ?? null,
 
-                'value' => $value
+                'tag' =>
+                    $matches[3] ?? null
 
             ];
 
@@ -63,5 +50,6 @@ class GedcomParser
 
 
         return $records;
+
     }
 }
