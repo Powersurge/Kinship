@@ -36,6 +36,11 @@ return [
             'verb' => 'GET',
         ],
         [
+            'name' => 'family#show',
+            'url' => '/api/v1/families/{id}',
+            'verb' => 'GET',
+        ],
+        [
             'name' => 'event#index',
             'url' => '/api/v1/events',
             'verb' => 'GET',
