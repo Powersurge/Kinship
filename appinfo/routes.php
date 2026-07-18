@@ -89,5 +89,10 @@ return [
             'url' => '/api/v1/families/{familyId}/events',
             'verb' => 'GET',
         ],
+        [
+            'name' => 'tree#show',
+            'url' => '/api/v1/tree/{personId}',
+            'verb' => 'GET',
+        ],
     ],
 ];
