@@ -109,6 +109,32 @@ class EventMapper extends QBMapper
     }
 
     /**
+     * Create event.
+     */
+    public function insert(
+        Event $event
+    ): Event {
+
+        return $this->insertEntity(
+            $event
+        );
+
+    }
+
+    /**
+     * Update event.
+     */
+    public function update(
+        Event $event
+    ): Event {
+
+        return $this->updateEntity(
+            $event
+        );
+
+    }
+
+    /**
      * Delete an event.
      */
     public function delete(
