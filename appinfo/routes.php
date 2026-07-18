@@ -41,6 +41,21 @@ return [
             'verb' => 'GET',
         ],
         [
+            'name' => 'relationship#index',
+            'url' => '/api/v1/relationships',
+            'verb' => 'GET',
+        ],
+        [
+            'name' => 'relationship#show',
+            'url' => '/api/v1/relationships/{id}',
+            'verb' => 'GET',
+        ],
+        [
+            'name' => 'relationship#personRelationships',
+            'url' => '/api/v1/people/{personId}/relationships',
+            'verb' => 'GET',
+        ],
+        [
             'name' => 'event#index',
             'url' => '/api/v1/events',
             'verb' => 'GET',
