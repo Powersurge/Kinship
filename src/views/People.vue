@@ -2,6 +2,10 @@
     <div>
         <h2>People</h2>
 
+        <router-link to="/people/create">
+            Add Person
+        </router-link>
+
         <ul>
             <li
                 v-for="person in people"
