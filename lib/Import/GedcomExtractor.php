@@ -50,6 +50,35 @@ class GedcomExtractor
 
             }
 
+            if ($record['tag'] === 'HUSB') {
+
+                $families[
+                    $currentFamily
+                ]['husband'] =
+                    $record['xref'];
+
+            }
+
+
+            if ($record['tag'] === 'WIFE') {
+
+                $families[
+                    $currentFamily
+                ]['wife'] =
+                    $record['xref'];
+
+            }
+
+
+            if ($record['tag'] === 'CHIL') {
+
+                $families[
+                    $currentFamily
+                ]['children'][] =
+                    $record['xref'];
+
+            }
+
         }
 
 
