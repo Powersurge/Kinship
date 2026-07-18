@@ -34,11 +34,57 @@ class FamilyService
     }
 
     /**
-     * Delete a family.
+     * Create family.
      */
-    public function delete(
+    public function create(
         Family $family
+    ): Family {
+        return $this->mapper->insert($family);
+    }
+
+    /**
+     * Update family.
+     */
+    public function updateFamily(
+        int $id,
+        array $data
+    ): Family {
+
+        $family =
+            $this->mapper->find($id);
+
+
+        if (isset($data['name'])) {
+            $family->setName(
+                $data['name']
+            );
+        }
+
+
+        if (isset($data['description'])) {
+            $family->setDescription(
+                $data['description']
+            );
+        }
+
+
+        return $this->mapper->update(
+            $family
+        );
+    }
+
+    /**
+     * Delete family.
+     */
+    public function deleteFamily(
+        int $id
     ): void {
-        $this->mapper->delete($family);
+
+        $family =
+            $this->mapper->find($id);
+
+        $this->mapper->delete(
+            $family
+        );
     }
 }
