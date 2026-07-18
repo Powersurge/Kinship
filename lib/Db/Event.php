@@ -17,6 +17,8 @@ class Event extends Entity implements JsonSerializable
     protected ?int $familyId = null;
     protected ?int $personId = null;
     protected ?int $createdBy = null;
+    protected $personId;
+    protected $familyId;
 
     public function __construct()
     {
@@ -38,5 +40,31 @@ class Event extends Entity implements JsonSerializable
             'personId' => $this->personId,
             'createdBy' => $this->createdBy,
         ];
+    }
+
+    public function getPersonId(): ?int
+    {
+        return $this->personId;
+    }
+
+    public function setPersonId(
+        ?int $personId
+    ): void {
+
+        $this->personId = $personId;
+
+    }
+
+    public function getFamilyId(): ?int
+    {
+        return $this->familyId;
+    }
+
+    public function setFamilyId(
+        ?int $familyId
+    ): void {
+
+        $this->familyId = $familyId;
+
     }
 }
