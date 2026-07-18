@@ -6,6 +6,8 @@ namespace OCA\Kinship\AppInfo;
 
 use OCA\Kinship\Db\PersonMapper;
 use OCA\Kinship\Service\PersonService;
+use OCA\Kinship\Db\FamilyMapper;
+use OCA\Kinship\Service\FamilyService;
 use OCP\AppFramework\App;
 use OCP\AppFramework\Bootstrap\IBootContext;
 use OCP\AppFramework\Bootstrap\IBootstrap;
@@ -37,6 +39,24 @@ class Application extends App implements IBootstrap
             function ($c) {
                 return new PersonService(
                     $c->get(PersonMapper::class)
+                );
+            }
+        );
+
+        $context->registerService(
+            FamilyMapper::class,
+            function ($c) {
+                return new FamilyMapper(
+                    $c->get(\OCP\IDBConnection::class)
+                );
+            }
+        );
+
+        $context->registerService(
+            FamilyService::class,
+            function ($c) {
+                return new FamilyService(
+                    $c->get(FamilyMapper::class)
                 );
             }
         );
