@@ -94,5 +94,10 @@ return [
             'url' => '/api/v1/tree/{personId}',
             'verb' => 'GET',
         ],
+        [
+            'name' => 'import#gedcom',
+            'url' => '/api/v1/import/gedcom',
+            'verb' => 'POST',
+        ],
     ],
 ];
