@@ -8,6 +8,8 @@ use OCA\Kinship\Db\PersonMapper;
 use OCA\Kinship\Service\PersonService;
 use OCA\Kinship\Db\FamilyMapper;
 use OCA\Kinship\Service\FamilyService;
+use OCA\Kinship\Db\RelationshipMapper;
+use OCA\Kinship\Service\RelationshipService;
 use OCP\AppFramework\App;
 use OCP\AppFramework\Bootstrap\IBootContext;
 use OCP\AppFramework\Bootstrap\IBootstrap;
@@ -57,6 +59,24 @@ class Application extends App implements IBootstrap
             function ($c) {
                 return new FamilyService(
                     $c->get(FamilyMapper::class)
+                );
+            }
+        );
+
+        $context->registerService(
+            RelationshipMapper::class,
+            function ($c) {
+                return new RelationshipMapper(
+                    $c->get(\OCP\IDBConnection::class)
+                );
+            }
+        );
+
+        $context->registerService(
+            RelationshipService::class,
+            function ($c) {
+                return new RelationshipService(
+                    $c->get(RelationshipMapper::class)
                 );
             }
         );
