@@ -6,6 +6,8 @@
 
     <name>Kinship</name>
 
+    <bootstrap>OCA\Kinship\AppInfo\Application</bootstrap>
+
     <summary>
         A family management and genealogy platform for Nextcloud.
     </summary>
@@ -37,7 +39,7 @@ Designed as an extensible genealogy platform.
     <category>social</category>
 
     <dependencies>
-        <nextcloud min-version="29" max-version="32"/>
+        <nextcloud min-version="29" max-version="99"/>
     </dependencies>
 
     <website>

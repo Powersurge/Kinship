@@ -1,10 +1,11 @@
-import Vue from 'vue';
+import { createApp } from 'vue';
 import App from './App.vue';
 import router from './router';
 
-Vue.prototype.$appName = 'kinship';
+const app = createApp(App);
 
-new Vue({
-    router,
-    render: h => h(App),
-}).$mount('#content');
+app.config.globalProperties.$appName = 'kinship';
+
+app.use(router);
+
+app.mount('#kinship');

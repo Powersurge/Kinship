@@ -6,7 +6,7 @@ namespace OCA\Kinship\Migration;
 
 use OCP\DB\ISchemaWrapper;
 use OCP\Migration\SimpleMigrationStep;
-use OCP\Setup\IOutput;
+use OCP\Migration\IOutput;
 
 class Version0003Date20260718000000 extends SimpleMigrationStep
 {

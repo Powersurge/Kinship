@@ -4,6 +4,7 @@ declare(strict_types=1);
 
 namespace OCA\Kinship\Migration;
 
+use Closure;
 use OCP\DB\ISchemaWrapper;
 use OCP\Migration\SimpleMigrationStep;
 use OCP\Migration\IOutput;
@@ -12,9 +13,11 @@ class Version0005Date20260718000000 extends SimpleMigrationStep
 {
     public function changeSchema(
         IOutput $output,
-        ISchemaWrapper $schema
+        Closure $schemaClosure,
+        array $options
     ): ?ISchemaWrapper {
 
+    $schema = $schemaClosure();
         /*
          * Registered Kinship extensions
          */
@@ -26,8 +29,8 @@ class Version0005Date20260718000000 extends SimpleMigrationStep
 
             $table->addColumn(
                 'id',
+                'integer',
                 [
-                    'type' => 'integer',
                     'autoincrement' => true,
                     'notnull' => true
                 ]
@@ -35,8 +38,8 @@ class Version0005Date20260718000000 extends SimpleMigrationStep
 
             $table->addColumn(
                 'extension_id',
+                'string',
                 [
-                    'type' => 'string',
                     'length' => 64,
                     'notnull' => true
                 ]
@@ -44,8 +47,8 @@ class Version0005Date20260718000000 extends SimpleMigrationStep
 
             $table->addColumn(
                 'name',
+                'string',
                 [
-                    'type' => 'string',
                     'length' => 128,
                     'notnull' => true
                 ]
@@ -53,16 +56,16 @@ class Version0005Date20260718000000 extends SimpleMigrationStep
 
             $table->addColumn(
                 'description',
+                'text',
                 [
-                    'type' => 'text',
                     'notnull' => false
                 ]
             );
 
             $table->addColumn(
                 'version',
+                'string',
                 [
-                    'type' => 'string',
                     'length' => 32,
                     'notnull' => true
                 ]
@@ -70,8 +73,8 @@ class Version0005Date20260718000000 extends SimpleMigrationStep
 
             $table->addColumn(
                 'enabled',
+                'boolean',
                 [
-                    'type' => 'boolean',
                     'notnull' => true,
                     'default' => false
                 ]
@@ -79,8 +82,8 @@ class Version0005Date20260718000000 extends SimpleMigrationStep
 
             $table->addColumn(
                 'created_at',
+                'integer',
                 [
-                    'type' => 'integer',
                     'notnull' => true
                 ]
             );
@@ -111,8 +114,8 @@ class Version0005Date20260718000000 extends SimpleMigrationStep
 
             $table->addColumn(
                 'id',
+                'integer',
                 [
-                    'type' => 'integer',
                     'autoincrement' => true,
                     'notnull' => true
                 ]
@@ -120,8 +123,8 @@ class Version0005Date20260718000000 extends SimpleMigrationStep
 
             $table->addColumn(
                 'extension_id',
+                'string',
                 [
-                    'type' => 'string',
                     'length' => 64,
                     'notnull' => true
                 ]
@@ -129,8 +132,8 @@ class Version0005Date20260718000000 extends SimpleMigrationStep
 
             $table->addColumn(
                 'config_key',
+                'string',
                 [
-                    'type' => 'string',
                     'length' => 128,
                     'notnull' => true
                 ]
@@ -138,8 +141,8 @@ class Version0005Date20260718000000 extends SimpleMigrationStep
 
             $table->addColumn(
                 'config_value',
+                'text',
                 [
-                    'type' => 'text',
                     'notnull' => false
                 ]
             );

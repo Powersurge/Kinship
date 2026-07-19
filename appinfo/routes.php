@@ -5,6 +5,11 @@ declare(strict_types=1);
 return [
     'routes' => [
         [
+            'name' => 'page#index',
+            'url' => '/',
+            'verb' => 'GET',
+        ],
+        [
             'name' => 'person#index',
             'url' => '/api/v1/people',
             'verb' => 'GET',

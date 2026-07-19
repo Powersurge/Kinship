@@ -4,6 +4,7 @@ declare(strict_types=1);
 
 namespace OCA\Kinship\Migration;
 
+use Closure;
 use OCP\DB\ISchemaWrapper;
 use OCP\Migration\SimpleMigrationStep;
 use OCP\Migration\IOutput;
@@ -14,9 +15,11 @@ extends SimpleMigrationStep
 
     public function changeSchema(
         IOutput $output,
-        ISchemaWrapper $schema
+        Closure $schemaClosure,
+        array $options
     ): ?ISchemaWrapper {
 
+        $schema = $schemaClosure();
 
         $table =
             $schema->getTable(
@@ -32,9 +35,8 @@ extends SimpleMigrationStep
 
             $table->addColumn(
                 'person_id',
+                'integer',
                 [
-                    'type' =>
-                        'integer',
 
                     'notnull' =>
                         false
@@ -52,9 +54,8 @@ extends SimpleMigrationStep
 
             $table->addColumn(
                 'family_id',
+                'integer',
                 [
-                    'type' =>
-                        'integer',
 
                     'notnull' =>
                         false

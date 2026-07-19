@@ -18,10 +18,13 @@ use OCA\Kinship\Import\GedcomImporter;
 use OCA\Kinship\Import\GedcomExtractor;
 use OCA\Kinship\Import\GedcomFamilyImporter;
 use OCA\Kinship\Import\GedcomRelationshipImporter;
+use OCA\Kinship\Listener\NavigationListener;
 use OCP\AppFramework\App;
 use OCP\AppFramework\Bootstrap\IBootContext;
 use OCP\AppFramework\Bootstrap\IBootstrap;
 use OCP\AppFramework\Bootstrap\IRegistrationContext;
+use OCP\INavigationManager;
+use OCP\IURLGenerator;
 
 class Application extends App implements IBootstrap
 {
@@ -35,6 +38,7 @@ class Application extends App implements IBootstrap
     public function register(
         IRegistrationContext $context
     ): void {
+
         $context->registerService(
             PersonMapper::class,
             function ($c) {
@@ -184,9 +188,17 @@ class Application extends App implements IBootstrap
         );
     }
 
-    public function boot(
-        IBootContext $context
-    ): void {
-        // Runtime initialization will be added here.
+    public function boot(IBootContext $context): void
+    {
+        $navigation = \OC::$server->get(INavigationManager::class);
+        $urlGenerator = \OC::$server->get(IURLGenerator::class);
+
+        $navigation->add([
+            'id' => self::APP_ID,
+            'order' => 50,
+            'href' => $urlGenerator->linkToRoute('kinship.page.index'),
+            'name' => 'Kinship',
+            'icon' => $urlGenerator->imagePath(self::APP_ID, 'app.svg'),
+        ]);
     }
 }
