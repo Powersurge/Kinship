@@ -63,8 +63,8 @@ Settings → Apps → Kinship
 Install dependencies:
 
 ```
-- composer install
-- npm install
+composer install
+npm install
 ```
 
 Build frontend:
@@ -102,9 +102,10 @@ docs/EXTENSIONS.md
 
 ## License
 
-AGPL-3.0# Kinship
+AGPL-3.0
+# Kinship
 
-> A modern family management and genealogy platform for Nextcloud.
+A modern family management and genealogy platform for Nextcloud.
 
 ## Overview
 
