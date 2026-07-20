@@ -11,14 +11,15 @@
 
 ## v0.2
 - Complete GEDCOM import
-- Photos
-- Documents
+- Photos, Videos, and Documents (store only media ID's for People and Events)
 - Sharing
 - Permissions
 
 ## v0.3
 - Interactive tree editor
 - Calendar integration
+- RSVP integration using Forms app
+- Journeys integration based on custom event type
 - Research notes
 
 ## v1.0
