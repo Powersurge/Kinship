@@ -2,7 +2,6 @@
 
 Base path:
 
-
 /api/v1
 
 
@@ -12,9 +11,7 @@ Base path:
 
 ### List people
 
-
 GET /people
-
 
 Response:
 
@@ -22,25 +19,45 @@ Response:
 {
     "people": []
 }
-Get person
+```
+### Get person
+
 GET /people/{id}
-Families
-List families
+
+##Families
+
+### List families
+
 GET /families
-Get family
+
+### Get family
+
 GET /families/{id}
-Relationships
-List relationships
+
+## Relationships
+
+### List relationships
+
 GET /relationships
-Person relationships
+
+### Person relationships
+
 GET /people/{id}/relationships
-Events
-List events
+
+## Events
+
+### List events
+
 GET /events
-Person events
+
+### Person events
+
 GET /people/{id}/events
-Family events
+
+### Family events
+
 GET /families/{id}/events
+
 
 Future API versions may add:
 
