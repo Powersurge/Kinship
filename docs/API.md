@@ -24,7 +24,7 @@ Response:
 
 GET /people/{id}
 
-##Families
+## Families
 
 ### List families
 
