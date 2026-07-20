@@ -8,14 +8,14 @@
 - npm
 
 ## Project Structure
-
+```
 kinship/
 ├── appinfo/
 ├── lib/
 ├── src/
 ├── docs/
 └── tests/
-
+```
 
 ## Backend
 
