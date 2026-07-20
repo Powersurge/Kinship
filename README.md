@@ -62,17 +62,16 @@ Settings → Apps → Kinship
 
 Install dependencies:
 
-
-composer install
-
-npm install
-
+```
+- composer install
+- npm install
+```
 
 Build frontend:
 
-
+```
 npm run build
-
+```
 
 ## API
 
@@ -85,12 +84,12 @@ API base:
 Available resources:
 
 
-/people
-/families
-/relationships
-/events
-/tree
-/import/gedcom
+- /people
+- /families
+- /relationships
+- /events
+- /tree
+- /import/gedcom
 
 
 ## Extension Development
@@ -168,7 +167,7 @@ The core remains intentionally lightweight. Advanced functionality is implemente
 Clone the repository:
 
 ```bash
-git clone https://github.com/<your-username>/kinship.git
+git clone https://github.com/Powersurge/Kinship.git
 cd kinship
 ```
 
