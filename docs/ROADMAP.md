@@ -21,7 +21,7 @@
 - Interactive tree editor
 - Calendar integration
 - RSVP integration
-- Journeys integration based on custom event type
+- Journeys integration based on custom event type (so family member's can share honeymoons, vacations, etc.)
 - Research notes
 
 ## v1.0
