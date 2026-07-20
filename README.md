@@ -64,6 +64,7 @@ Install dependencies:
 
 
 composer install
+
 npm install
 
 
