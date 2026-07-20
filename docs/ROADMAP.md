@@ -5,6 +5,7 @@
 - People
 - Families
 - Events
+- Participants
 - Relationships
 - API
 - Extension framework
@@ -18,7 +19,7 @@
 ## v0.3
 - Interactive tree editor
 - Calendar integration
-- RSVP integration using Forms app
+- RSVP integration
 - Journeys integration based on custom event type
 - Research notes
 
