@@ -45,23 +45,23 @@ class DnaExtension implements IKinshipExtension
     }
 }
 ```
-Possible Extensions
+##  Possible Extensions
 
 Examples:
 
-DNA matching
-GEDCOM import/export
-Photo archives
-Family tree visualization
-Historical records
-Research notes
-AI genealogy assistant
-Design Principles
+- DNA matching
+- GEDCOM import/export
+- Photo archives
+- Family tree visualization
+- Historical records
+- Research notes
+- AI genealogy assistant
+- Design Principles
 
 Extensions should:
 
-Avoid modifying Kinship core files
-Use public APIs
-Store their own data
+- Avoid modifying Kinship core files
+- Use public APIs
+- Store their own data
 Provide clear documentation
 Remain independently maintainable
