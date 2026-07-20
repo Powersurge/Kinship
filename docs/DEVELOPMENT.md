@@ -1,4 +1,13 @@
-# Kinship Development Guide ## Requirements - Nextcloud development environment - PHP 8+ - Node.js - npm ## Project Structure
+# Kinship Development Guide
+
+## Requirements
+
+- Nextcloud development environment
+- PHP 8+
+- Node.js
+- npm
+
+## Project Structure
 
 kinship/
 ├── appinfo/
