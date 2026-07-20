@@ -6,6 +6,7 @@
 - Families
 - Events
 - Participants
+- Places
 - Relationships
 - API
 - Extension framework
