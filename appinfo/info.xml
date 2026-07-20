@@ -39,23 +39,23 @@ Designed as an extensible genealogy platform.
     <category>social</category>
 
     <dependencies>
-        <nextcloud min-version="29" max-version="99"/>
+        <nextcloud min-version="34" max-version="99"/>
     </dependencies>
 
     <website>
-        https://github.com/yourusername/kinship
+        https://github.com/Powersurge/Kinship
     </website>
 
     <bugs>
-        https://github.com/yourusername/kinship/issues
+        https://github.com/Powersurge/Kinship/issues
     </bugs>
 
     <repository>
-        https://github.com/yourusername/kinship
+        https://github.com/Powersurge/Kinship
     </repository>
 
     <screenshot>
-        https://github.com/yourusername/kinship/raw/main/screenshots/dashboard.png
+        https://github.com/Powersurge/Kinship/raw/main/screenshots/dashboard.png
     </screenshot>
 
 </info>
