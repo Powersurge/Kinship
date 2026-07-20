@@ -20,7 +20,7 @@
 ## v0.3
 - Interactive tree editor
 - Calendar integration
-- RSVP integration
+- RSVP integration (can Forms app code be reused for this?)
 - Journeys integration based on custom event type (so family member's can share honeymoons, vacations, etc.)
 - Research notes
 
