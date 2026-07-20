@@ -44,6 +44,7 @@ class DnaExtension implements IKinshipExtension
         // Register services
     }
 }
+```
 Possible Extensions
 
 Examples:
