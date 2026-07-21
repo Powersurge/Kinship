@@ -20,7 +20,8 @@
 - Sharing
 - Permissions (Admin only role for adding/updating/deleting Participants, Places, & Custom Events)
 - Privacy controls
-- Audit log
+- Version history
+- Audit logging
 
 ## v0.3 — Research
 - Sources (tables needed: sources, source_repositories, citations, evidence, research_notes)
