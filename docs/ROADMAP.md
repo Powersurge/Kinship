@@ -25,7 +25,7 @@
 - Maps integration
 - RSVP integration (can Forms app code be reused for this?)
 - Journeys integration based on custom event type (so family member's can share honeymoons, vacations, etc.)
-- Research notes
+- Sources/Citations/Research notes (tables needed: sources, source_repositories, citations, evidence, research_notes, research_note_links, research_evidence, research_tasks, research_comments, research_revisions)
 
 ## v1.0
 - Stable genealogy platform
