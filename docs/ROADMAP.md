@@ -48,5 +48,6 @@
 - Memory sharing
 
 ## v1.0
-- Stable genealogy platform
-- Extension marketplace support
+- Stable platform
+- Extension marketplace
+- Third-party developer API
