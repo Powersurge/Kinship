@@ -17,7 +17,7 @@
 - Photos, Videos, Audio, and Documents (store only media ID's for People and Events)
 - Sharing
 - Permissions
-- Admin only roles for Participants, Places, & Custom Events
+- Admin only role for adding/updating/deleting Participants, Places, & Custom Events
 
 ## v0.3
 - Interactive tree editor
