@@ -13,6 +13,7 @@
 
 ## v0.2
 - Complete GEDCOM import
+- Custum Events integration
 - Photos, Videos, Audio, and Documents (store only media ID's for People and Events)
 - Sharing
 - Permissions
