@@ -13,7 +13,7 @@
 
 ## v0.2
 - Complete GEDCOM import
-- Photos, Videos, and Documents (store only media ID's for People and Events)
+- Photos, Videos, Audio, and Documents (store only media ID's for People and Events)
 - Sharing
 - Permissions
 
