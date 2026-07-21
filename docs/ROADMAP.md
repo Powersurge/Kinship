@@ -1,54 +1,107 @@
 # Kinship Roadmap
 
 ## v0.1 — Foundation
-- Core genealogy model
-- People
-- Families
-- Events
-- Participants
-- Places
-- Relationships
-- Facts / Claims
+- Core genealogy data model
+-- People
+-- Families
+-- Events
+-- Participants
+-- Places
+-- Relationships
+-- Facts
+-- Claims
 - Date handling
+-- Exact dates
+-- Approximate dates
+-- Date ranges
+-- Unknown dates
+- Basic source model
+-- Sources
+-- Citations
+- Media references
 - API
 - Extension framework
+- Database migrations
+- Core permissions model
 
-## v0.2 — Data management
+## v0.2 — Data Management
 - GEDCOM import/export
-- Custom events
-- Media attachments (store only media ID's for People and Events)
+- GEDCOM validation
+- Import preview and review
+- Custom event types
+- Media attachments
+-- Store Nextcloud media IDs
+-- Link media to any genealogy object
+- Search
+-- People
+-- Events
+-- Places
+-- Sources
+-- Notes
 - Sharing
-- Permissions (Admin only role for adding/updating/deleting Participants, Places, & Custom Events)
+- Permissions
+-- Owner
+-- Editor
+-- Contributor
+-- Viewer
 - Privacy controls
+-- Living person protection
+-- Restricted information
 - Version history
 - Audit logging
+- Basic duplicate detection
 
-## v0.3 — Research
-- Sources (tables needed: sources, source_repositories, citations, evidence, research_notes)
-- Repositories
-- Citations
-- Evidence
-- Research notes (tables needed: research_notes, research_note_links, research_evidence, research_tasks, research_comments, research_revisions)
-- Tasks
-- Comments
-- Revisions
+## v0.3 — Research & Evidence
+- Source management
+-- Sources
+-- Repositories
+-- Citations
+- Evidence management
+- Research notes
+-- Research questions
+-- Research links
+-- Research tasks
+-- Research comments
+-- Research revisions
+- Claim evaluation
+-- Confidence levels
+-- Accepted/rejected claims
+-- Conflicting evidence
+- Research workflow
 
-## v0.4 — Collaboration
-- Interactive tree editor
-- Calendar
-- Maps
+## v0.4 — Collaboration & Visualization
+- Interactive family tree editor
+- Tree navigation
+- Relationship visualization
+- Timeline views
+- Calendar integration
+- Maps integration
 - Notifications
-- Duplicate detection
+- Comments
+- Advanced duplicate detection
 - Merge tools
+- Conflict resolution
 
-## v0.5 — Family experience
-- RSVP integration (can Forms app code be reused for this?)
-- Journeys (integration based on custom event type so family member's can share honeymoons, vacations, etc.)
-- Storytelling
-- Family timelines
-- Memory sharing
+## v0.5 — Reporting & Export
+- Family reports
+- Individual reports
+- Timeline reports
+- Source reports
+- Research reports
+- GEDCOM enhancements
+- Additional export formats
+-- JSON
+-- CSV
+-- PDF
+- Printable family trees
 
-## v1.0
-- Stable platform
+## v1.0 — Stable Platform
+- Stable API
 - Extension marketplace
-- Third-party developer API
+- Third-party developer tools
+- Documentation
+- Performance optimization
+- Backup/restore tools
+- Migration tools
+
+
