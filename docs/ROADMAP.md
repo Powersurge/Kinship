@@ -2,22 +2,22 @@
 
 ## v0.1 — Foundation
 - Core genealogy data model
--- People
--- Families
--- Events
--- Participants
--- Places
--- Relationships
--- Facts
--- Claims
+  - People
+  - Families
+  - Events
+  - Participants
+  - Places
+  - Relationships
+  - Facts
+  - Claims
 - Date handling
--- Exact dates
--- Approximate dates
--- Date ranges
--- Unknown dates
+  - Exact dates
+  - Approximate dates
+  - Date ranges
+  - Unknown dates
 - Basic source model
--- Sources
--- Citations
+  - Sources
+  - Citations
 - Media references
 - API
 - Extension framework
@@ -30,43 +30,43 @@
 - Import preview and review
 - Custom event types
 - Media attachments
--- Store Nextcloud media IDs
--- Link media to any genealogy object
+  - Store Nextcloud media IDs
+  - Link media to any genealogy object
 - Search
--- People
--- Events
--- Places
--- Sources
--- Notes
+  - People
+  - Events
+  - Places
+  - Sources
+  - Notes
 - Sharing
 - Permissions
--- Owner
--- Editor
--- Contributor
--- Viewer
+  - Owner
+  - Editor
+  - Contributor
+  - Viewer
 - Privacy controls
--- Living person protection
--- Restricted information
+  - Living person protection
+  - Restricted information
 - Version history
 - Audit logging
 - Basic duplicate detection
 
 ## v0.3 — Research & Evidence
 - Source management
--- Sources
--- Repositories
--- Citations
+  - Sources
+  - Repositories
+  - Citations
 - Evidence management
 - Research notes
--- Research questions
--- Research links
--- Research tasks
--- Research comments
--- Research revisions
+  - Research questions
+  - Research links
+  - Research tasks
+  - Research comments
+  - Research revisions
 - Claim evaluation
--- Confidence levels
--- Accepted/rejected claims
--- Conflicting evidence
+  - Confidence levels
+  - Accepted/rejected claims
+  - Conflicting evidence
 - Research workflow
 
 ## v0.4 — Collaboration & Visualization
@@ -90,9 +90,9 @@
 - Research reports
 - GEDCOM enhancements
 - Additional export formats
--- JSON
--- CSV
--- PDF
+  - JSON
+  - CSV
+  - PDF
 - Printable family trees
 
 ## v1.0 — Stable Platform
