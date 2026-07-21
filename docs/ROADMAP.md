@@ -51,6 +51,8 @@
   |Accept/reject claims|	✓  |Optional|	                   ✗                    |	  ✗  |
   |Merge duplicates    |	✓  |	  ✓   |	                   ✗                    |  	✗  |
   |Delete records      |	✓  |Optional|	                   ✗                    |  	✗  |
+  |Create Custom Events|  ✓  |Optional|                    ✗                    |   ✗  |
+  |Create Places       |  ✓  |Optional|                    ✗                    |   ✗  |
 - Privacy & Data Protection
   - Media references
   - Media permissions
