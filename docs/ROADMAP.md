@@ -40,10 +40,16 @@
   - Notes
 - Sharing
 - Permissions
-  - Owner
-  - Editor
-  - Contributor
-  - Viewer
+|Action              |Owner| Editor |               Contributor               |Viewer|
+|--------------------|-----|--------|-----------------------------------------|------|
+|Create people       |	✓  |	  ✓   |   	               ✓                    |	  ✗  |
+|Edit names/dates    |	✓  |	  ✓   |✓(proposes claim for substantive changes)|	  ✗  |
+|Add sources         |	✓  |	  ✓   |	                   ✓                    |	  ✗  |
+|Add research notes  |	✓  |	  ✓   |	                   ✓                    |  	✗  |
+|Add claims          |	✓  |	  ✓   |	                   ✓                    |	  ✗  |
+|Accept/reject claims|	✓  |Optional|	                   ✗                    |	  ✗  |
+|Merge duplicates    |	✓  |	  ✓   |	                   ✗                    |  	✗  |
+|Delete records      |	✓  |Optional|	                   ✗                    |  	✗  |
 - Privacy & Data Protection
   - Media references
   - Media permissions
