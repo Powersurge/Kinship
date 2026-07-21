@@ -44,9 +44,14 @@
   - Editor
   - Contributor
   - Viewer
-- Privacy controls
-  - Living person protection
-  - Restricted information
+- Privacy & Data Protection
+  - Media references
+  - Media permissions
+  - Living person detection
+  - Privacy profiles
+  - Restricted information controls
+  - Object-level visibility rules
+  - Share filtering
 - Version history
 - Audit logging
 - Basic duplicate detection
