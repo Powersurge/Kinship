@@ -1,4 +1,5 @@
 # Kinship Roadmap
+Kinship is a genealogy platform built on Nextcloud that emphasizes evidence-based research, collaboration, extensibility, and long-term data preservation.
 
 ## v0.1 — Foundation
 - Core genealogy data model
@@ -51,9 +52,9 @@
   |Accept/reject claims|	✓  |Optional|	                   ✗                    |	  ✗  |
   |Merge duplicates    |	✓  |	  ✓   |	                   ✗                    |  	✗  |
   |Delete records      |	✓  |Optional|	                   ✗                    |  	✗  |
-  |Create Custom Events|  ✓  |    ✓   |                    ✗                    |   ✗  |
-  |Create Places       |  ✓  |    ✓   |                    ✗                    |   ✗  |
-  |Create Participants |  ✓  |    ✓   |                    ✓                    |   ✗  |
+  |Manage Custom Events|  ✓  |    ✓   |                    ✗                    |   ✗  |
+  |Manage Places       |  ✓  |    ✓   |                    ✗                    |   ✗  |
+  |Manage Participants |  ✓  |    ✓   |                    ✓                    |   ✗  |
 - Privacy & Data Protection
   - Media references
   - Media permissions
@@ -78,7 +79,7 @@
   - Research tasks
   - Research comments
   - Research revisions
-- Claim evaluation
+- Claim resolution
   - Confidence levels
   - Accepted/rejected claims
   - Conflicting evidence
@@ -109,9 +110,12 @@
   - CSV
   - PDF
 - Printable family trees
+- Printable pedigree charts
+- Descendant charts
 
 ## v1.0 — Stable Platform
-- Stable API
+- Stable REST API
+- Stable extension API
 - Extension marketplace
 - Third-party developer tools
 - Documentation
