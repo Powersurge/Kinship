@@ -33,6 +33,8 @@ Kinship is a genealogy platform built on Nextcloud that emphasizes evidence-base
 - Media attachments
   - Store Nextcloud media IDs
   - Link media to any genealogy object
+- Settings
+  - Privacy threshold (controls how long people with an unknown death date are treated as living for privacy purposes)
 - Search
   - People
   - Events
@@ -59,6 +61,9 @@ Kinship is a genealogy platform built on Nextcloud that emphasizes evidence-base
   - Media references
   - Media permissions
   - Living person detection
+    - Calculate if user is still alive
+      - Possible values (living, deceased, unknown)
+    - If user is still alive, prevent their exact birthday, email, phone, address, photos, & notes from being exposed in shared trees, public links, exports, API's, or reports
   - Privacy profiles
   - Restricted information controls
   - Object-level visibility rules
