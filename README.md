@@ -165,6 +165,16 @@ Media
 
 The core remains intentionally lightweight. Advanced functionality is implemented as optional extensions.
 
+### Developer Platform
+
+Kinship includes an extension framework for:
+
+- DNA analysis
+- Photo archives
+- Historical records
+- Research tools
+- AI genealogy assistants
+
 ## Technology
 
 - PHP 8.2+
