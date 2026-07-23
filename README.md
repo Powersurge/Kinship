@@ -193,25 +193,6 @@ npm run build
 ## [View Roadmap](docs/ROADMAP.md)
 
 
-### v0.1
-- Project foundation
-- People
-- Families
-- Relationships
-- Events
-- Timeline
-
-### v0.2
-- Search
-- Notifications
-- Dashboard
-- Plugin SDK
-
-### v1.0
-- Stable Extension API
-- Complete Documentation
-- Production Release
-
 ## Contributing
 
 Contributions are welcome.
