@@ -109,12 +109,12 @@ Kinship is a modern family management and genealogy platform for Nextcloud.
 
 It provides a foundation for managing:
 
-People
-Families
-Relationships
-Events
-Family timelines
-Family trees
+- People
+- Families
+- Relationships
+- Events
+- Family timelines
+- Family trees
 
 Kinship is designed as a core platform that developers can extend with additional modules.
 
@@ -165,7 +165,7 @@ Media
 
 The core remains intentionally lightweight. Advanced functionality is implemented as optional extensions.
 
-### Developer Platform
+## Developer Platform
 
 Kinship includes an extension framework for:
 
