@@ -190,6 +190,27 @@ Build assets:
 npm run build
 ```
 
+## API
+
+API base:
+
+
+/api/v1
+
+
+Available resources:
+
+
+- /people
+- /families
+- /relationships
+- /events
+- /tree
+- /import/gedcom
+
+
+## [Extension Development](docs/EXTENSIONS.md)
+
 ## [View Roadmap](docs/ROADMAP.md)
 
 
