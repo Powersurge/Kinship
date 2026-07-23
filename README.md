@@ -105,7 +105,18 @@ docs/EXTENSIONS.md
 AGPL-3.0
 # Kinship
 
-A modern family management and genealogy platform for Nextcloud.
+Kinship is a modern family management and genealogy platform for Nextcloud.
+
+It provides a foundation for managing:
+
+People
+Families
+Relationships
+Events
+Family timelines
+Family trees
+
+Kinship is designed as a core platform that developers can extend with additional modules.
 
 ## Overview
 
