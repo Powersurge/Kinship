@@ -190,7 +190,8 @@ Build assets:
 npm run build
 ```
 
-## Roadmap
+## [View Roadmap](docs/ROADMAP.md)
+
 
 ### v0.1
 - Project foundation
